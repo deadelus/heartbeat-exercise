@@ -12,6 +12,7 @@ The purpose of this hiring exercise is to test out your level in Elixir/OTP and 
 - Applications should **not** use any database / disc storage. All needed data should be stored only in application memory.
 - Candidate can use any Elixir or Erlang library he/she wants to.(but app can be written in pure Elixir/ Erlang/ OTP)
 - Code accuracy also matters. Readable, safe, refactorable code is plus.
+- Test implementation is plus.
 
 ### Heartbeat project
 
