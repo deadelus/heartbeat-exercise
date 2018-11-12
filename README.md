@@ -43,8 +43,8 @@ When Engine receives:
 **Then:** action=`listen` with `heart_beat_period`
 
 When Engine receives:
-`state` === `sleeping` AND `messages_in_adhoc` related to the agent id 
-**Then:** action=`listen` with `heart_beat_period`
+`state` === `sleeping` AND `messages_in_adhoc` related to the agent id > 0
+**Then:** action=`listen` with `heart_beat_period` and the `messages_in_adhoc` related to the agent id = 0
 
 When Engine receives:
 `state` === `listening` AND agent not active for more than `HEART_BEAT_PERIOD` related to the agent id 
