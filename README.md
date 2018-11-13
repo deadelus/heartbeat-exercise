@@ -50,6 +50,10 @@ When Engine receives:
 `state` === `listening` AND agent not active for more than `HEART_BEAT_PERIOD` related to the agent id 
 **Then:** action=`sleep`
 
+When Engine receives:
+`state` === `stopping`
+**Then:** delete the related agent_id in memory
+
 ##### Public methods accessible from iex
 - `update_heart_beat_period\1`
 - `increment_messages_in_adhoc\1`
