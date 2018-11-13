@@ -69,9 +69,9 @@ When: Agent is asked to stop **Then:** state=`stopping`, Send heartbeat, log kil
 
 When: Send heartbeat **Then:** cancel previous timer if any, plan timer to send a new heartbeat in `heart_beat_period`, if < 3 calls in previous `heart_beat_period` => contact the engine with state, identificator, RAM. It should receive a response from the engine instantly
 
-When: Entering sleeping mode **Then:** state=sleeping, send heartbeat
+When: receiving action=Sleep  Entering sleeping mode **Then:** state=sleeping, send heartbeat
 
-When: Entering listening mode **Then:** state=listening, send heartbeat
+When: receiving action=listen Entering listening mode **Then:** state=listening, send heartbeat
 
 ##### Public methods accessible from iex
 - `listen\0`
