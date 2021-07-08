@@ -65,7 +65,10 @@ It should be possible to open **n** Agent Application. Like in Zenaton.
 
 When: Agent is asked to listen **Then:** state=`starting`, Send heartbeat
 
-When: User is running `active\0` method **Then:** if the Agent is state=`listening` it sends a fake message to Engine, the Engine must reset the `sleeping_timer` for this `agent_identificator`. If the Agent is in state=`sleeping`, it will make a listen (☝️), then do the same behaviour than when state=`listening`. If the agent is in state=`stopping`, it must do nothing. 
+When: User is running `active\0` method **Then:** 
+if the Agent is state=`listening` it sends a fake message to Engine, the Engine must reset the `sleeping_timer` for this `agent_identificator`. 
+If the Agent is in state=`sleeping`, it will make a listen (☝️), 
+then do the same behaviour than when state=`listening`. If the agent is in state=`stopping`, it must do nothing. 
 
 When: Agent is asked to stop **Then:** state=`stopping`, Send heartbeat, log kill message
 
