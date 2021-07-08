@@ -1,6 +1,9 @@
 defmodule ZenatonAgent do
 use GenServer
 
+  # test for one agent
+
+
   def start_link() do
     GenServer.start_link(__MODULE__, nil)
   end
@@ -23,6 +26,8 @@ use GenServer
 
   defp send_heartbeat(pid) do
     # todo make a call to the Engine
+    # todo make a recusrive the response time delay
+    # todo make a GenServer Call according to the Engine resp to update agent state
     IO.inspect("SEND HEARTBEAT")
     IO.inspect(pid)
   end
